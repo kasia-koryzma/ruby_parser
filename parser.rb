@@ -6,6 +6,7 @@ def parse_file(file)
 	
 	File.open(file, "r").each_line do |line|
 		split_by_space_line = line.split(" ")
+		# Detect if a url has already been accessed by an ip address. 
 		repeated = web_views.detect {|line| line[:url] == split_by_space_line[0] && line[:ip] == split_by_space_line[1] }
 		
 		web_view_hash = {:url => split_by_space_line[0], :ip => split_by_space_line[1], :repeated => repeated.nil? ? false : true }
@@ -32,7 +33,9 @@ def list_sorted_unique_page_views(web_views)
 	
 	web_views.group_by {|hash| hash[:url] }.each do |url, array|
 		count = 0
-		array.group_by {|hash| hash[:ip]}.each do |ip, array| 
+		array.group_by {|hash| hash[:ip]}.each do |ip, array|
+			# A webpage is deemed unique if all of its :repeated flags are set to false i.e. it has only been accessed once
+			# by an ip address. Count how many ip addresses have unique accesses for a webpage.
 			if array.all? {|hash| hash[:repeated] == false }
 				count +=1
 			end
