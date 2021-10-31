@@ -2,8 +2,8 @@
 
 # Requirements
 
-Ruby (written with Ruby 3.0.0)
-RSpec (written with verion 3.10)
+1. Ruby (written with Ruby 3.0.0)
+2. RSpec (written with verion 3.10)
 
 ## Using the Sample Code
 
