@@ -1,17 +1,28 @@
-# Table of contents
-1. [Introduction](#introduction)
-2. [Some paragraph](#paragraph1)
-    1. [Sub paragraph](#subparagraph1)
-3. [Another paragraph](#paragraph2)
+# Ruby script for parsing urls from file 
 
-## Introduction <a name="introduction"></a>
-Ruby script for sorting url-ip combinations. 
+# Requirements
 
-## Some paragraph <a name="paragraph1"></a>
-The first paragraph text
+Ruby (written with Ruby 3.0.0)
+RSpec (written with verion 3.10)
 
-### Sub paragraph <a name="subparagraph1"></a>
-This is a sub paragraph, formatted in heading 3 style
+## Using the Sample Code
 
-## Another paragraph <a name="paragraph2"></a>
-The second paragraph text
+The sample contains script for parsing out and sorting urls and ip adresses, spec test for verifying the output of the script and webserver.log file containing the urls/ip combinations. The script requires a parameter to be a file containing urls and ip adresses. Spec test uses webserver.log as its test file. 
+
+The script can be run directly from the command line. 
+
+## Running the Samples From the Command Line
+* Clone this repository:
+```
+    $ git clone https://github.com/kasia-koryzma/ruby_parser.git
+```
+
+* Run the sample:  
+```
+    $ ruby ruby_parser/parser.rb webserver.log
+
+```
+* Run the spec test with:
+```
+    $ rspec ruby_parser/parser_spec.rb 
+```
