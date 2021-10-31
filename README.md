@@ -1,4 +1,4 @@
-# Ruby script for parsing urls from file 
+# Ruby script for parsing urls/ip addresses from a file.
 
 ## Requirements
 
