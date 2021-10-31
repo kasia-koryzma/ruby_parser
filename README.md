@@ -1,6 +1,6 @@
 # Ruby script for parsing urls from file 
 
-# Requirements
+## Requirements
 
 1. Ruby (written with Ruby 3.0.0)
 2. RSpec (written with verion 3.10)
